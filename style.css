@@ -1,0 +1,1178 @@
+
+/*================== CSS-Reset ==============*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*============================================================= General ======================================================================*/
+
+.header_1, .header_2, main {
+    margin: 0 10%;
+}
+
+:root {
+    --pink-color: rgba(246, 36, 113, 0.849);
+    --grey-border: lightgrey;
+    --grey-text: dimgray;
+    --white-text: white;
+}
+
+i:hover, img:hover, button:hover, select:hover {
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+
+.flex_sp_bt {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+/*=========================================================== Header-Part =====================================================================*/
+
+/*----------------------- Header-1 ------------------*/
+
+.header_1 {
+    padding: 0.6em 0;
+}
+.header_1 .media_icons i{
+    padding: 0.2em;
+    background-color: rgba(128, 128, 128, 0.12);
+    border-radius: 3px;
+    text-align: center;
+}
+.header_1 p {
+    font-size: 0.7rem;
+}
+.header_1 select {
+    border: none;
+    background-color: transparent;
+}
+
+/*----------------------- Header-2 ------------------*/
+
+.header_2 {
+    padding: 1em 0;
+    flex-wrap: wrap;
+}
+.header_2 .comp_logo h1 {
+    font-size: 2rem;
+    color: var(--pink-color);
+    font-family: monospace;
+}
+.header_2 .search_bar {
+    position: relative;
+    width: 50%;
+}
+.header_2 .search_bar input {
+    padding: 0.8em;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid;
+    border-color: var(--grey-border);
+}
+.search_bar input:focus {
+    outline: none;
+}
+.header_2 .search_bar i {
+    position: absolute;
+    right: 1%;
+    top: 25%;
+    color: var(--grey-text);
+}
+.header_2 .shop_icons i {
+    font-size: 1.5rem;
+    padding: 0.4em;   
+} 
+.shop_icons sup {
+    font-size: 1rem;
+    background-color: var(--pink-color);
+    color: var(--white-text);
+    padding: 1px 4px;
+    border-radius: 50%;
+}
+.tab_bar {
+    position: fixed;
+    bottom: 0;
+    display: none;
+    justify-content: space-around;
+    width: 50%;
+    background-color: rgba(255, 255, 255, 0.638);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    left: 25%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.tab_bar i, span {
+    padding: 0.6em;
+    font-size: 1.5rem;
+}
+.tab_bar i:hover, .tab_bar span:hover {
+    cursor: pointer;
+    opacity: 1;
+    background-color: black;
+    color: white;
+}
+
+
+@media screen and (max-width: 1100px){
+    .header_1, .header_2, main, footer {
+        margin: 0 5%;
+    }
+    .header_1 .media_icons, .header_2 .shop_icons {
+        display: none;
+    }
+    .tab_bar {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 550px){
+    .header_1, .header_2, main, footer {
+        margin: 0 5%;
+    }
+    .currency_language {
+        display: none;
+    }
+    .header_2 {
+        justify-content: center;
+    }
+    .header_2 .search_bar {
+        width: 100%;
+    }
+    .tab_bar {
+        width: 100%;
+        left: 0;
+    }
+}
+
+
+
+/*============================================================= Main-Part ===================================================================*/
+
+/*---------------------------------------------- nav-bar --------------------------------------------------*/
+
+.nav_bar {
+    width: 60%;
+    margin: 0.8em auto;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: var(--grey-text);
+    font-size: 0.8rem;  
+}
+.nav_bar div:hover {
+    cursor: pointer;
+    color: black;
+    text-decoration: underline;
+    text-underline-offset: 1px;
+}
+
+/*============================================================== Banner-1 ====================================================================*/
+
+.banner_1 {
+    background-image: url("images/banner-1.jpg");
+    background-size: 100% 100%;
+    border-radius: 10px;
+    padding: 4em 5em;
+    margin: 1em 0;
+}
+.banner_1_info {
+    width: 40%;
+}
+.banner_1_info h3 {
+    color: var(--pink-color);
+    font-size: 2rem;
+    margin-bottom: 0.2em;
+}
+.banner_1_info h1 {
+    font-size: 2.5rem;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.banner_1_info h4 {
+    color: var(--grey-text);
+    font-size: 1.4rem;
+    font-family:sans-serif;
+    margin-bottom: 0.8rem;
+}
+.banner_1_info b {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.banner_1_info button {
+    background-color: var(--pink-color);
+    border: none;
+    color: var(--white-text);
+    padding: 0.7em 1em;
+    border-radius: 5px;
+}
+.banner_1_info button:hover {
+    opacity: 1;
+    background-color:rgba(242, 45, 65, 0.825);
+    font-weight: bold;
+    box-shadow: 0 0 5px rgb(237, 119, 139);
+}
+
+@media screen and (max-width: 1100px){
+    .nav_bar {
+        display: none;
+    }
+    .banner_1_info {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 550px){
+    .banner_1 {
+        padding: 0em 1em;
+    }
+    .banner_1_info {
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.632);
+        padding: 0.5em;
+    }
+
+}
+
+
+/*=========================================================== Categories_Row_1 ================================================================*/
+
+
+.categories_row_1 {
+    width: 100%;
+    overflow: scroll;
+    padding: 1em 0;
+    margin: 2em 0;
+}
+.categories_row_1 .category {
+    min-width: 280px;
+    border: 1px solid;
+    border-color: var(--grey-border);
+    border-radius: 5px;
+    padding: 0.5em;
+    margin: 0 0.5em;
+}
+.categories_row_1 .category .left_part {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.categories_row_1 .category .right_part {
+    padding: 1em;
+    font-size: 12px;
+    color: var(--grey-text);
+}
+.categories_row_1 img {
+    height: 3.5em;
+    width: 3em;
+    border: 1px solid;
+    border-color: var(--grey-border);
+    padding: 5px;
+}
+.categories_row_1 h5 {
+    margin-bottom: 1.5em;
+}
+.categories_row_1 h6 {
+    color: var(--pink-color);
+    font-size: 0.8rem;
+}
+.categories_row_1 h6:hover {
+    color:darkmagenta;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 820px){
+    .categories_row_1 {
+        padding: 0;
+    }
+    .categories_row_1 .category {
+        min-width: 333px;
+    }
+}
+
+@media screen and (max-width: 395px){
+    .categories_row_1 .category {
+        min-width: 290px;
+        margin: 0 1em;
+    }
+}
+
+
+
+/*=================================================================== Shopping =================================================================*/
+
+
+.shopping {
+    width: 100%;
+    margin-bottom: 2em;
+}
+
+/*===================================================== Side-Bar ====================================================*/
+
+
+.sidebar {
+    width: 20%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 0;
+}
+
+/*---------------------- Category ----------------------*/
+
+.categories {
+    width: 100%;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-bottom: 2em;
+}
+.categories h4 {
+    margin-bottom: 1em;
+}
+.categories .items {
+    padding: 0.7em 0;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+.items img {
+    height: 2em;
+    width: 2em;
+    margin-right: 1px;
+}
+.items img:hover {
+    opacity: 1;
+    height: 2.1em;
+    width: 2.1em;
+}
+.items h5 {
+    font-size: 15px;
+}
+.items h5:hover {
+    color: rgb(255, 0, 157);
+    cursor: pointer;
+}
+.items h6 {
+    font-size: 1em;
+    font-weight: 100;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    cursor: pointer;
+}
+
+/*---------------------- Best-Sellers ----------------------*/
+
+.best_sellers {
+    width: 100%;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.best_sellers h4 {
+    margin-bottom: 1em;
+}
+.best_sellers .product {
+    padding: 0.7em 0;
+    display: flex;
+}
+.best_sellers img {
+    height: 70px;
+    width: 70px;
+    margin-right: 20px;
+}
+.details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.details h5:hover {
+    cursor: pointer;
+    color: rgb(255, 0, 157);;
+}
+.details .span_1 {
+    text-decoration: line-through;
+    margin-right: 10px;
+    font-size: 1em;
+    color: var(--grey-text);
+}
+.details .span_2 {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+@media screen and (max-width: 1280px){
+    .sidebar {
+        display: none;
+    }
+}
+
+
+
+/*================================================================ Main_Shoping ===============================================================*/
+
+
+.main_shopping {
+    width: 77%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 1280px){
+    .main_shopping {
+        width: 100%;
+    }
+}
+
+/*================================================================= Shoping_1 =================================================================*/
+
+.main_shopping .shopping_1 {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1em;
+}
+.shopping_1 .new_trend_top {
+    margin: 0 auto;
+    width: 32%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 1em;
+}
+.new_trend_top h4 {
+    border-bottom: 1px solid;
+    border-color: var(--grey-border);
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+.new_trend_top .products_div {
+    min-height: 65px;
+    border: 1px solid;
+    border-color: var(--grey-border);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* padding: 0.5em; */
+    margin-bottom: 1em;
+}
+.products_div img {
+    height: 85%;
+    width: 30%;
+    margin-right: 0px;
+}
+.products_div img:hover {
+    opacity: 1;
+    height: 90%;
+    width: 33%;
+    margin-right: 0px;
+}
+.products_div .pro_details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.pro_details h5:hover {
+    cursor: pointer;
+    color:rgb(198, 6, 223);
+    font-weight: bold;
+    text-decoration: underline;
+}
+.pro_details h6 {
+    color: var(--grey-text);
+    margin: 5px 0;
+    font-size: 0.8em;
+}
+.pro_details .span_3 {
+    color: var(--pink-color);
+    font-size: 1em;
+    font-weight: bold;
+}
+.pro_details .span_4 {
+    text-decoration: line-through;
+    color: var(--grey-text);
+    font-size: 0.8em;
+}
+
+@media screen and (max-width: 820px){
+    .shopping_1 .new_trend_top {
+        width: 48%;   
+    }
+    .new_trend_top .products_div {
+        min-height: 80px;
+    }
+}
+
+@media screen and (max-width: 420px){
+    .shopping_1 .new_trend_top {
+        width: 100%;   
+    }
+}
+
+
+/*=============================================================== Deal of the Day ==============================================================*/
+
+
+.main_shopping .deals_day {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 2em;
+}
+.deals_day h4 {
+    border-bottom: 1px solid;
+    border-color: var(--grey-border);
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+.deals_day .deal_container {
+    min-height: 50vh;
+    width: 100%;
+    border: 1px solid;
+    border-color: var(--grey-border);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.deal_container img {
+    height: 70%;
+    width: 35%;
+}
+.deal_container img:hover {
+    height: 90%;
+    width: 45%;
+    opacity: 1;   
+}
+.deal_container .deal_details {
+    height: 75%;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.stars {
+    font-size: 1rem;
+}
+.deal_details h5 {
+    font-size: 1rem;
+}
+.deal_details h5:hover {
+    cursor: pointer;
+    color: rgb(97, 66, 192);
+    text-decoration: underline;
+    text-shadow: 0 0 2px rgb(141, 207, 237);
+}
+
+.deal_details p {
+    font-size: 0.9rem;
+    color: var(--grey-text);
+}
+.deal_details .span_5 {
+    color: var(--pink-color);
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-right: 0.6em;
+}
+.deal_details .span_6 {
+    text-decoration: line-through;
+    color: var(--grey-text);
+    font-size: 1.2rem;
+}
+.deal_details .span_7 {
+    font-size: 0.7rem;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-right: 20em;
+}
+.deal_details .span_8 {
+    font-size: 0.7rem;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.deal_details button {
+    background-color: var(--pink-color);
+    border: none;
+    color: var(--white-text);
+    width: 28%;
+    padding: 8px 8px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.deal_details button:hover {
+    opacity: 1;
+    background-color:rgb(12, 170, 46);
+}
+.deal_details .outer_bar {
+    height: 6px;
+    background-color: var(--grey-border);
+    border-radius: 10px;   
+}
+.deal_details .inner_bar {
+    background-color: var(--pink-color);
+    width: 40%;
+    height: 2.5px;
+    margin: 1.5px 3px;
+}
+.deal_details h6 {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.deal_details .offer_ends {
+    display: flex;
+}
+.time_left {
+    height: 3em;
+    width: 3em;
+    background-color: var(--grey-border);
+    margin-right: 0.7em;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.time_left h4 {
+    font-size: 1.3rem;
+    padding: 0;
+    margin: 0;
+}
+.time_left p {
+    font-size: 0.7rem;
+    color: var(--grey-text);
+    padding: 0;
+    margin: 0;
+}
+
+
+@media screen and (max-width: 420px){
+
+    .deals_day .deal_container {
+        min-height: 80vh;
+        flex-direction: column;
+    }
+    .deal_container img {
+        height: 40%;
+        width: 50%;
+    }
+    .deal_container .deal_details {
+        height: 55%;
+        width: 90%;
+    }
+    .deal_details .span_7 {
+        margin-right: 8em;
+    }
+}
+
+
+/*=================================================================== New-Products ===========================================================*/
+
+
+.main_shopping .new_products {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 15px 0;
+}
+.new_products h4 {
+    border-bottom: 1px solid;
+    border-color: var(--grey-border);
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+}
+.new_products .items_div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5em;
+}
+.items_div .item {
+    width: 23%;
+    min-width: 180px;
+    min-height: 270px;
+    border: 1px solid;
+    border-color: var(--grey-border);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.item img {
+    height: 55%;
+    width: 90%;
+}
+.item img:hover {
+    opacity: 1;
+    height: 75%;
+    width: 100%;
+}
+.item .item_details {
+    height: 45%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.item_details .name {
+    color: var(--pink-color);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+}
+.item_details .name:hover {
+    cursor: pointer;
+    color: blueviolet;
+    text-shadow: 0 0 2px rgb(195, 147, 239);
+}
+.item_details .description {
+    color: var(--grey-text);
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 14px;
+}
+.item_details .span_3 {
+    font-size: 1em;
+    font-weight: bold;
+}
+.item_details .span_4 {
+    text-decoration: line-through;
+    color: var(--grey-text);
+    font-size: 0.8em;
+}
+
+@media screen and (max-width: 820px){
+    .new_products .items_div {
+        overflow: scroll;
+    }
+    .items_div .item {
+        min-width: 48%;
+        margin-right: 1em;
+    }
+}
+
+@media screen and (max-width: 420px){
+    .items_div .item {
+        min-width: 97%;
+        margin-right: 1em;
+    }
+}
+
+
+/*================================================================= Bottom_Part_1 =============================================================*/
+
+
+.bottom_part_1 {
+    width: 100%;
+    height: 55vh;
+    margin-bottom: 2em;
+}
+
+.bottom_part_1 .summer_poster {
+    width: 45%;
+    height: 100%;
+    border-radius: 10px;
+    background-image: url("banners/cta-banner.jpg");
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.summer_poster_cont {
+    width: 50%;
+    height: 55%;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.552);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.offer_details {
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.offer_details button {
+    background: #000;
+    color: var(--white-text);
+    border-radius: 5px;
+    padding: 5px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    cursor: auto;
+}
+.offer_details h3 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 25px;
+    color: rgba(0, 0, 0, 0.736);
+}
+.offer_details h5 {
+    color: var(--grey-text);
+    font-size: 16px;
+}
+.offer_details h6 {
+    color: var(--grey-text);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 18px;
+    cursor: pointer;
+}
+.offer_details h6:hover {
+    cursor: pointer;
+    color: rgb(251, 5, 99);
+    text-shadow: 0 0px 5px rgba(245, 126, 146, 0.662);
+}
+
+.bottom_part_1 .testimonial {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.bottom_part_1 .our_services {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.bottom_part_1 h4 {
+    border-bottom: 1px solid;
+    border-color: var(--grey-border);
+    padding-bottom: 10px;
+}
+.msg_div, .serv_div {
+    width: 100%;
+    height: 85%;
+    border: 1px solid;
+    border-color: var(--grey-border);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+img[alt="girl"] {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+}
+img[alt="Double Quotes"] {
+    height: 20px;
+    width: 20px;
+}
+.msg_div_content {
+    width: 55%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    color: var(--grey-text);
+}
+.msg_div h5 {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 15px;
+    cursor: pointer;
+}
+.msg_div h5:hover {
+    cursor: pointer;
+    color: black;
+}
+.msg_div h6 {
+    font-size: 12px;
+}
+.serv_div_content {
+    width: 65%;
+    display: flex;
+}
+.serv_div_content .details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.serv_div_content img {
+    height: 40px;
+    width: 40px;  
+    margin-right: 10px;  
+}
+.serv_div_content h5 {
+    color: var(--grey-text);    
+}
+.serv_div_content h6 {
+    color: var(--grey-text);
+}
+
+
+@media screen and (max-width: 920px){
+    .bottom_part_1 {
+        min-height: 1200px;
+        flex-direction: column;
+    }
+    .bottom_part_1 .summer_poster {
+        width: 100%;
+        height: 45%;
+    }
+    .bottom_part_1 .testimonial {
+        width: 100%;
+        height: 28%;
+    }
+    .bottom_part_1 .our_services {
+        width: 100%;
+        height: 22%;
+    }
+    .our_services .serv_div {
+        height: 82%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .serv_div_content {
+        width: 28%;
+        display: flex;
+    }
+}
+
+
+@media screen and (max-width: 420px){
+    .bottom_part_1 .summer_poster {
+        height: 28%;
+    }
+    .bottom_part_1 .testimonial {
+        height: 28%;
+    }
+    .bottom_part_1 .our_services {
+        height: 40%;
+    }
+    .our_services .serv_div {
+        height: 90%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .serv_div_content {
+        width: 60%;
+        display: flex;
+    }
+}
+
+
+/*================================================================= Bottom_Part_2 ==============================================================*/
+
+
+.bottom_part_2 {
+    width: 100%;
+    height: 30vh;
+    margin-bottom: 2em;
+}
+.bottom_part_2_div {
+    width: 23%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.bottom_part_2_div img {
+    width: 100%;
+    height: 60%;
+    border-radius: 8px;
+    margin-bottom: 0.6em;
+}
+.bottom_part_2_div h6 {
+    color: rgb(225, 96, 139);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 0.8em;
+    cursor: pointer;
+}
+.bottom_part_2_div h5 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9em;
+}
+.bottom_part_2_div h5:hover {
+    color: rgb(14, 14, 197);
+    cursor: pointer;
+}
+.bottom_part_2_div p {
+    font-size: 0.9em;    
+    color: var(--grey-text);
+}
+
+
+@media screen and (max-width: 920px){
+    .bottom_part_2 {
+        min-height: 700px;
+        flex-wrap: wrap;
+    }
+    .bottom_part_2_div {
+        width: 48%;
+        height: 45%;
+    }
+}
+
+@media screen and (max-width: 550px){
+    .bottom_part_2 {
+        min-height: 1200px;
+        flex-wrap: wrap;
+    }
+    .bottom_part_2_div {
+        width: 100%;
+        height: 24%;
+        justify-content: space-evenly;
+    }
+}
+
+
+/*===================================================================== Footer =================================================================*/
+
+
+footer {
+    width: 100%;
+    height: 400px;
+    min-height: 700px;
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 0.8em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(134, 135, 136);
+    background-color: rgb(0, 0, 0);
+}
+.hr {
+    width: 100%;
+    background-color: var(--grey-text);
+    height: 1px;
+}
+.brand_directory {
+    width: 80%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 1.5em 0;
+}
+.brand_directory h5 {
+    color: rgb(241, 113, 135);
+    font-size: 0.8rem;
+    font-family:'Gill Sans', 'Gill Sans MT''Trebuchet MS', sans-serif;
+}
+.brand_directory span {
+    color: rgb(181, 182, 184);
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 0.8rem;
+}
+.brand_directory p {
+    word-spacing: 4px;
+}
+.brand_directory p:hover {
+    cursor: pointer;
+}
+
+.others {
+    width: 80%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.popular {
+    height: 60%;
+    width: 18%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.popular h5 {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: var(--white-text);
+    font-weight: bold;
+    font-size: 0.9rem;
+    text-decoration: underline;
+    text-underline-offset: 7px;
+    text-decoration-color: var(--pink-color);
+    margin-bottom: 0.8em;
+}
+.popular p:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+.contact {
+    width: 100%;
+    display: flex;
+}
+.contact i {
+    font-size: 1.4rem;
+    margin-right: 0.7em;
+}
+
+.brand_partners {
+    width: 80%;
+    height: 17%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+}
+.brand_partners img {
+    width: 30%;
+    height: 25%;
+    margin-bottom: 1.5em;
+}
+
+
+@media screen and (max-width: 950px){
+    footer {
+        min-height: 900px;
+        margin: 0 0%;   
+    }
+    .brand_directory {
+        height: 25%;
+        width: 90%;
+        flex-wrap: wrap;
+    }
+    .others {
+        height: 55%;
+        width: 90%;
+        flex-wrap: wrap;
+    }
+    .brand_partners {
+       height: 13%;
+       font-size: 0.6rem;
+    }
+    .popular {
+        height: 40%;
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 550px){
+    footer {
+        min-height: 1100px;
+    }
+    .brand_directory {
+        height: 30%;
+    }
+    .others {
+        height: 50%;
+    }
+    .popular {
+        height: 25%;
+        width: 50%;
+    }
+    .brand_partners {
+        height: 10%;
+        font-size: 0.7rem;
+    }
+    .brand_partners img {
+        width: 60%;
+        height: 35%;
+    }
+}
+
+/*=============================================================================================================================================*/
